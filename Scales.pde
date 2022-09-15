@@ -1,11 +1,16 @@
 void setup() {
-  size(500, 500);  //feel free to change the size
-  noLoop(); //stops the draw() function from repeating
-}
-void draw() {
-  //your code here
-}
-void scale(int x, int y) {
-  //your code here
+  size(1000, 800);
+  frameRate(3);
 }
 
+void scale(int x, int y, int siz) {
+  fill(77, 134, (int)(Math.random() * 85) + 170); //170-255
+  arc(x, y, siz, 2*siz, PI, 2*PI);
+}
+void draw() {
+  for(int y = 50; y < 1001; y += 50){
+    for(int x = 0; x < 1001; x += 50){
+      scale(x, y, (int)(Math.random() *60) + 70);  
+    } 
+  }
+}
